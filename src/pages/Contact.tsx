@@ -234,7 +234,7 @@ const Contact = () => {
                             </Button>
                           </a>
                           <a
-                            href="https://discord.gg/flashpointcampaigns"
+                            href="https://discord.gg/9MgZgrutGY"
                             target="_blank"
                             rel="noopener noreferrer"
                           >
