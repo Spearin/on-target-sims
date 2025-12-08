@@ -53,7 +53,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <a
-              href="https://store.steampowered.com/app/1314410/Flashpoint_Campaigns_Southern_Storm/"
+              href="https://www.matrixgames.com/game/flashpoint-campaigns-cold-war"
               target="_blank"
               rel="noopener noreferrer"
             >
