@@ -42,7 +42,7 @@ const HeroSection = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up animation-delay-300">
               <a
-                href="https://store.steampowered.com/app/1314410/Flashpoint_Campaigns_Southern_Storm/"
+                href="https://store.steampowered.com/app/3170350/Flashpoint_Campaigns_Cold_War/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -51,7 +51,7 @@ const HeroSection = () => {
                 </Button>
               </a>
               <a
-                href="https://www.matrixgames.com/game/flashpoint-campaigns-southern-storm"
+                href="https://www.matrixgames.com/game/flashpoint-campaigns-cold-war"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -71,7 +71,7 @@ const HeroSection = () => {
                 <div className="text-xs uppercase tracking-wider text-muted-foreground">Nations</div>
               </div>
               <div className="text-center">
-                <div className="font-display text-2xl font-bold text-primary">60+</div>
+                <div className="font-display text-2xl font-bold text-primary">110+</div>
                 <div className="text-xs uppercase tracking-wider text-muted-foreground">Scenarios</div>
               </div>
               <div className="text-center">
@@ -84,8 +84,8 @@ const HeroSection = () => {
           {/* Right Content - Video */}
           <div className="animate-fade-up animation-delay-300">
             <VideoEmbed
-              videoId="QK6o-3g8qAA"
-              title="Flashpoint Campaigns: Southern Storm - Official Trailer"
+              videoId="juRyXUCDyz8"
+              title="Flashpoint Campaigns: Cold War - Release Trailer"
             />
           </div>
         </div>

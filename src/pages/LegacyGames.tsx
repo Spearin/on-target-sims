@@ -6,20 +6,7 @@ import { ExternalLink, Calendar } from "lucide-react";
 
 const legacyGames = [
   {
-    year: "2017",
-    title: "Red Storm Player's Edition",
-    description:
-      "An enhanced version of our original classic, Red Storm Player's Edition brings improved graphics, refined gameplay mechanics, and expanded scenario content while maintaining the authentic Cold War tactical experience that made the series famous.",
-    features: [
-      "Enhanced graphics and UI",
-      "Expanded scenario library",
-      "Improved AI behavior",
-      "PBEM multiplayer support",
-    ],
-    storeLink: "https://www.matrixgames.com/game/flashpoint-campaigns-red-storm-players-edition",
-  },
-  {
-    year: "2018",
+    year: "2015",
     title: "Germany Reforged",
     description:
       "A major expansion that adds new nations, scenarios, and equipment to the Flashpoint Campaigns universe. Experience the Cold War conflict from new perspectives with expanded German forces and additional NATO allies.",
@@ -32,7 +19,20 @@ const legacyGames = [
     storeLink: "https://www.matrixgames.com/game/flashpoint-campaigns-germany-reforged",
   },
   {
-    year: "2013",
+    year: "2014",
+    title: "Flashpoint Campaigns: Red Storm Player's Edition",
+    description:
+      "An enhanced version of our original classic, Red Storm Player's Edition brings improved graphics, refined gameplay mechanics, and expanded scenario content while maintaining the authentic Cold War tactical experience that made the series famous.",
+    features: [
+      "Enhanced graphics and UI",
+      "Expanded scenario library",
+      "Improved AI behavior",
+      "PBEM multiplayer support",
+    ],
+    storeLink: "https://www.matrixgames.com/game/flashpoint-campaigns-red-storm-players-edition",
+  },  
+  {
+    year: "2005",
     title: "Flashpoint Germany",
     description:
       "The game that started it all. Flashpoint Germany introduced our revolutionary WEGO simultaneous execution system and set the standard for Cold War tactical wargaming. A true classic that laid the foundation for everything that followed.",

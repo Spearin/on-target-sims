@@ -1,10 +1,10 @@
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 
 const stats = [
-  { end: 60, suffix: "+", label: "Scenarios" },
+  { end: 110, suffix: "+", label: "Scenarios" },
   { end: 80, suffix: "+", label: "Maps" },
   { end: 10, suffix: "", label: "Nations" },
-  { end: 500, suffix: "+", label: "Unit Types" },
+  { end: 900, suffix: "+", label: "Unit Types" },
 ];
 
 const StatsSection = () => {

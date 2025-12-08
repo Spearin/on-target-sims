@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const navItems = [
   { name: "Home", path: "/" },
-  { name: "Flashpoint: Cold War", path: "/flashpoint-cold-war" },
+  { name: "Flashpoint Campaigns: Cold War", path: "/flashpoint-cold-war" },
   { name: "Legacy Games", path: "/legacy-games" },
   { name: "About Us", path: "/about" },
   { name: "Contact", path: "/contact" },
@@ -94,7 +94,7 @@ const Header = () => {
             </Link>
           ))}
           <a
-            href="https://store.steampowered.com/app/1314410/Flashpoint_Campaigns_Southern_Storm/"
+            href="https://store.steampowered.com/app/3170350/Flashpoint_Campaigns_Cold_War/"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-2"

@@ -19,7 +19,7 @@ const CTASection = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://store.steampowered.com/app/1314410/Flashpoint_Campaigns_Southern_Storm/"
+              href="https://store.steampowered.com/app/3170350/Flashpoint_Campaigns_Cold_War/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -28,7 +28,7 @@ const CTASection = () => {
               </Button>
             </a>
             <a
-              href="https://www.matrixgames.com/game/flashpoint-campaigns-southern-storm"
+              href="https://www.matrixgames.com/game/flashpoint-campaigns-cold-war"
               target="_blank"
               rel="noopener noreferrer"
             >

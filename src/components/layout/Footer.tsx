@@ -68,7 +68,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="https://store.steampowered.com/app/1314410/Flashpoint_Campaigns_Southern_Storm/"
+                  href="https://store.steampowered.com/app/3170350/Flashpoint_Campaigns_Cold_War/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1"
@@ -78,7 +78,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://www.matrixgames.com/game/flashpoint-campaigns-southern-storm"
+                  href="https://www.matrixgames.com/game/flashpoint-campaigns-cold-war"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1"
@@ -97,7 +97,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="https://www.matrixgames.com/forums/viewforum.php?f=10029"
+                  href="https://forums.matrixgames.com/viewforum.php?f=12037"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1"
@@ -107,7 +107,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="mailto:info@ontargetsimulations.com"
+                  href="mailto:support@ontargetsimulations.com"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1"
                 >
                   <Mail className="w-3 h-3" /> Email Us
