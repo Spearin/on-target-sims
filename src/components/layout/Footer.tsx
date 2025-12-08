@@ -39,7 +39,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/flashpoint-cold-war" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Flashpoint: Cold War
+                  Flashpoint Campaigns: Cold War
                 </Link>
               </li>
               <li>

@@ -88,7 +88,7 @@ const FlashpointColdWar = () => {
                 
                 <div className="flex flex-wrap gap-4 justify-center">
                   <a
-                    href="https://store.steampowered.com/app/1314410/Flashpoint_Campaigns_Southern_Storm/"
+                    href="https://store.steampowered.com/app/3170350/Flashpoint_Campaigns_Cold_War/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -97,7 +97,7 @@ const FlashpointColdWar = () => {
                     </Button>
                   </a>
                   <a
-                    href="https://www.matrixgames.com/game/flashpoint-campaigns-southern-storm"
+                    href="https://www.matrixgames.com/game/flashpoint-campaigns-cold-war"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -118,8 +118,8 @@ const FlashpointColdWar = () => {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
                 <VideoEmbed
-                  videoId="QK6o-3g8qAA"
-                  title="Flashpoint Campaigns: Southern Storm Gameplay Trailer"
+                  videoId="juRyXUCDyz8"
+                  title="Flashpoint Campaigns: Cold War Gameplay Trailer"
                 />
               </div>
             </div>
