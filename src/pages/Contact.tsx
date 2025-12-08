@@ -221,7 +221,7 @@ const Contact = () => {
                         </p>
                         <div className="flex flex-wrap gap-3">
                           <a
-                            href="https://www.matrixgames.com/forums/viewforum.php?f=10029"
+                            href="https://forums.matrixgames.com/viewforum.php?f=12037"
                             target="_blank"
                             rel="noopener noreferrer"
                           >
@@ -265,7 +265,7 @@ const Contact = () => {
                           For technical issues and game support, please visit our official forums or contact Matrix Games support.
                         </p>
                         <a
-                          href="https://www.matrixgames.com/support"
+                          href="https://www.matrixgames.com/contacts"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-primary hover:underline text-sm inline-flex items-center gap-1"
@@ -282,10 +282,10 @@ const Contact = () => {
                       Direct Contact
                     </h3>
                     <a
-                      href="mailto:info@ontargetsimulations.com"
+                      href="mailto:support@ontargetsimulations.com"
                       className="text-primary hover:underline text-lg"
                     >
-                      info@ontargetsimulations.com
+                      support@ontargetsimulations.com
                     </a>
                   </div>
                 </div>
