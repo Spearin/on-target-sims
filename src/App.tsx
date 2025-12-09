@@ -19,7 +19,7 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <BrowserRouter basename="/on-target-sims">
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/flashpoint-cold-war" element={<FlashpointColdWar />} />

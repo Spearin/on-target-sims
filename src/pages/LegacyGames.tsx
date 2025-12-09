@@ -170,7 +170,7 @@ const LegacyGames = () => {
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto text-center">
                 <h2 className="font-display text-3xl md:text-4xl font-bold uppercase mb-6">
-                  A Decade of Excellence
+                  Two Decades of Excellence
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-8">
                   From our humble beginnings with Flashpoint Germany in 2013 to the comprehensive Flashpoint Campaigns: Cold War today, we've remained committed to one goal: creating the most authentic and engaging Cold War tactical simulations possible.
