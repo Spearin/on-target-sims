@@ -116,17 +116,23 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground">
-            © {currentYear} On Target Simulations. All rights reserved.
+            © {currentYear} On Target Simulations Ltd. All rights reserved.
           </p>
-          <p className="text-xs text-muted-foreground">
-            Published by{" "}
+             <p className="text-xs text-muted-foreground flex items-center gap-2">
+            <span>Published by</span>
             <a
               href="https://www.matrixgames.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:underline"
+              className="text-primary hover:underline inline-flex items-center gap-2"
             >
-              Matrix Games
+              <span>Matrix Games</span>
+              <img
+                src="images/matrix-games.png"
+                alt="Matrix Games"
+                className="h-10 w-auto object-contain"
+              />
+              
             </a>
           </p>
         </div>

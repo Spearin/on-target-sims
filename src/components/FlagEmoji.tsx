@@ -40,38 +40,26 @@ const fallbackFlags: Record<
 const FlagEmoji = ({ countryCode, name, title, className }: FlagEmojiProps) => {
   const normalizedKey = (countryCode || name || "").toLowerCase().replace(/[^a-z]/g, "");
   const fallback = fallbackFlags[normalizedKey];
+  const baseClass = cn(
+    "flag-emoji relative inline-flex h-8 w-10 items-center justify-center rounded-[5px]",
+    className,
+  );
 
   if (fallback) {
     return (
-      <span
-        className={cn(
-          "inline-flex h-8 w-10 items-center justify-center overflow-hidden rounded-[5px]",
-          className,
-        )}
-        role="img"
-        aria-label={title || fallback.title}
-        title={title || fallback.title}
-      >
+      <span className={baseClass} role="img" aria-label={title || fallback.title} title={title || fallback.title}>
         <img
           src={fallback.src}
           alt={title || fallback.title}
           loading="lazy"
-          className="h-full w-full object-contain"
+          className="h-full w-full rounded-[5px] object-contain"
         />
       </span>
     );
   }
 
   return (
-    <span
-      className={cn(
-        "inline-flex h-8 w-10 items-center justify-center overflow-hidden rounded-[3px]",
-        className,
-      )}
-      role="img"
-      aria-label={title || name}
-      title={title || name}
-    >
+    <span className={baseClass} role="img" aria-label={title || name} title={title || name}>
       <CountryFlag
         countryCode={countryCode || ""}
         title={title || name}

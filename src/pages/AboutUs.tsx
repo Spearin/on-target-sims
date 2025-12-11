@@ -89,7 +89,7 @@ const AboutUs = () => {
                         On Target Simulations was founded by a group of dedicated wargamers and simulation professionals who shared a common vision: to create the most authentic and engaging Cold War tactical wargaming experience possible.
                       </p>
                       <p>
-                        What started as a passion project has evolved into a studio known for pushing the boundaries of what wargaming can achieve. Our revolutionary WEGO turn system, pioneered in Flashpoint Germany, has become the gold standard for turn-based tactical combat.
+                        What started as a passion project has evolved into a studio known for pushing the boundaries of what wargaming can achieve. Our revolutionary WEGO turn cycle based on the OODA loop model, pioneered in Flashpoint Campaigns: Red Storm, has become a gold standard for wargaming.
                       </p>
                       <p>
                         Today, we continue to refine and expand our simulations, driven by the same commitment to authenticity and gameplay excellence that has defined us from the beginning.

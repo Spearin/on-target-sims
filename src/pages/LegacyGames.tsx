@@ -33,8 +33,8 @@ const legacyGames = [
     storeLink: "https://www.matrixgames.com/game/flashpoint-campaigns-germany-reforged",
   },
   {
-    year: "2014",
-    title: "Flashpoint Campaigns: Red Storm Player's Edition",
+    year: "2013",
+    title: "Flashpoint Campaigns: Red Storm",
     description:
       "An enhanced version of our original classic, Red Storm Player's Edition brings improved graphics, refined gameplay mechanics, and expanded scenario content while maintaining the authentic Cold War tactical experience that made the series famous.",
     features: [
@@ -47,15 +47,15 @@ const legacyGames = [
     storeLink: "https://www.matrixgames.com/game/flashpoint-campaigns-red-storm-players-edition",
   },  
   {
-    year: "2005",
-    title: "Flashpoint Germany",
+    year: "2005 - 2013",
+    title: "Flashpoint Germany™",
     description:
-      "The game that started it all. Flashpoint Germany introduced our revolutionary WEGO simultaneous execution system and set the standard for Cold War tactical wargaming. A true classic that laid the foundation for everything that followed.",
+      "In 2001, Matrix Games partnered with Simulations Canada to modernize the design of their Main Battle Tank series. Robert Crandall, a SimCan programmer, was selected for this monumental task. Flashpoint Germany™ is a true classic that laid the foundation for everything that followed.",
     features: [
-      "Original WEGO system",
-      "Cold War tactical combat",
-      "Authentic scenarios",
-      "Historical accuracy",
+      "Grand Tactical gameplay",
+      "Command simulation experience in an accessible design",
+      "17 scenarios across 4 fictional maps",
+      "Discontinued in 2013",
     ],
     image: "images/legacy/flashpoint-germany.png",
     storeLink: "https://www.matrixgames.com/game/flashpoint-germany",
@@ -91,7 +91,7 @@ const LegacyGames = () => {
                   Legacy <span className="text-gradient-olive">Titles</span>
                 </h1>
                 <p className="text-lg text-muted-foreground">
-                  Explore the evolution of tactical wargaming through our celebrated game series. Each title represents a milestone in Cold War simulation excellence.
+                  Explore the evolution of tactical wargaming through our celebrated game series. Each game in our catalog represents lessons learned and innovations made.
                 </p>
               </div>
             </div>
@@ -198,9 +198,6 @@ const LegacyGames = () => {
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-8">
                   From our humble beginnings with Flashpoint Germany in 2005 to the comprehensive Flashpoint Campaigns: Cold War today, we've remained committed to one goal: creating the most authentic and engaging Cold War tactical simulations possible.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Each game in our catalog represents lessons learned and innovations made. Our legacy titles remain playable and supported, ensuring that fans of traditional wargaming can continue to enjoy these classics while also experiencing our latest innovations.
                 </p>
               </div>
             </div>

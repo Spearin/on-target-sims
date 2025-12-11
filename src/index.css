@@ -127,3 +127,69 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .flag-emoji {
+    overflow: visible;
+    transition: transform 220ms ease, filter 220ms ease;
+    will-change: transform;
+  }
+
+  .flag-emoji::after {
+    content: "";
+    position: absolute;
+    left: 16%;
+    right: 16%;
+    height: 10px;
+    bottom: -8px;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.1) 55%, transparent 70%);
+    opacity: 0;
+    transform: translateY(-2px) scale(0.85);
+    filter: blur(8px);
+    transition: opacity 220ms ease, transform 220ms ease;
+    pointer-events: none;
+  }
+
+  .flag-card:hover .flag-emoji,
+  .flag-card:focus-visible .flag-emoji {
+    transform: translateY(-6px) scale(1.06);
+  }
+
+  .flag-card:hover .flag-emoji::after,
+  .flag-card:focus-visible .flag-emoji::after {
+    opacity: 0.4;
+    transform: translateY(0) scale(1);
+  }
+
+  .nations-tab .flag-card {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: none;
+  }
+
+  .nations-tab[data-state="active"] .flag-card {
+    animation: flag-fade-up 360ms ease-out forwards;
+  }
+
+  .nations-tab[data-state="active"] .flag-card:nth-child(1) { animation-delay: 30ms; }
+  .nations-tab[data-state="active"] .flag-card:nth-child(2) { animation-delay: 60ms; }
+  .nations-tab[data-state="active"] .flag-card:nth-child(3) { animation-delay: 90ms; }
+  .nations-tab[data-state="active"] .flag-card:nth-child(4) { animation-delay: 120ms; }
+  .nations-tab[data-state="active"] .flag-card:nth-child(5) { animation-delay: 150ms; }
+  .nations-tab[data-state="active"] .flag-card:nth-child(6) { animation-delay: 180ms; }
+  .nations-tab[data-state="active"] .flag-card:nth-child(7) { animation-delay: 210ms; }
+  .nations-tab[data-state="active"] .flag-card:nth-child(8) { animation-delay: 240ms; }
+  .nations-tab[data-state="active"] .flag-card:nth-child(9) { animation-delay: 270ms; }
+  .nations-tab[data-state="active"] .flag-card:nth-child(10) { animation-delay: 300ms; }
+
+  @keyframes flag-fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

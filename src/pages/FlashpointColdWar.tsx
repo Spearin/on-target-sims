@@ -9,17 +9,20 @@ import { Computer, ExternalLink, Monitor, HardDrive, Cpu, MemoryStick } from "lu
 import FlagEmoji from "@/components/FlagEmoji";
 
 const nations = [
-  { name: "United States", flag: <FlagEmoji countryCode="US" title="United States" /> },
-  { name: "United Kingdom", flag: <FlagEmoji countryCode="GB" title="United Kingdom" /> },
-  { name: "West Germany", flag: <FlagEmoji countryCode="DE" title="West Germany" /> },  
-  { name: "Soviet Union", flag: <FlagEmoji name="SU" title="Soviet Union" /> },
-  { name: "East Germany", flag: <FlagEmoji name="DDR" title="East Germany" /> },
-  { name: "France", flag: <FlagEmoji countryCode="FR" title="France" /> },
-  { name: "Canada", flag: <FlagEmoji countryCode="CA" title="Canada" /> },
-  { name: "Belgium", flag: <FlagEmoji countryCode="BE" title="Belgium" /> },
-  { name: "Poland", flag: <FlagEmoji countryCode="PL" title="Poland" /> },
-  { name: "Czechoslovakia", flag: <FlagEmoji countryCode="CZ" title="Czechoslovakia" /> },
+  { name: "United States", flagProps: { countryCode: "US", title: "United States" } },
+  { name: "United Kingdom", flagProps: { countryCode: "GB", title: "United Kingdom" } },
+  { name: "West Germany", flagProps: { countryCode: "DE", title: "West Germany" } },
+  { name: "Soviet Union", flagProps: { name: "SU", title: "Soviet Union" } },
+  { name: "East Germany", flagProps: { name: "DDR", title: "East Germany" } },
+  { name: "France", flagProps: { countryCode: "FR", title: "France" } },
+  { name: "Canada", flagProps: { countryCode: "CA", title: "Canada" } },
+  { name: "Belgium", flagProps: { countryCode: "BE", title: "Belgium" } },
+  { name: "Poland", flagProps: { countryCode: "PL", title: "Poland" } },
+  { name: "Czechoslovakia", flagProps: { countryCode: "CZ", title: "Czechoslovakia" } },
 ];
+
+const guideUrlForNation = (name: string) =>
+  `https://ontargetsimulations.com/guides/coldwar/reference/Forces/${encodeURIComponent(name)}/`;
 
 const screenshots = [
   {
@@ -147,7 +150,7 @@ const FlashpointColdWar = () => {
                     value="scenarios"
                     className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground uppercase tracking-wider text-xs py-3"
                   >
-                    Scenarios
+                    RTFM
                   </TabsTrigger>
                   <TabsTrigger
                     value="equipment"
@@ -188,27 +191,32 @@ const FlashpointColdWar = () => {
                         Multiplayer
                       </h3>
                       <p className="text-muted-foreground text-sm leading-relaxed">
-                        Play against opponents worldwide with PBEM (Play By Email) support. Take your time planning the perfect strategy.
+                        Play against opponents worldwide with PBEM++, Play By Email Classic (PBEM) and Hot Seat support.
                       </p>
                     </div>
                   </div>
                 </TabsContent>
 
-                <TabsContent value="nations" className="space-y-6">
+                <TabsContent value="nations" className="space-y-6 nations-tab" data-testid="nations-tab">
                   <p className="text-muted-foreground text-center mb-8">
                     Command forces from 10 playable nations, each with unique equipment and capabilities.
                   </p>
-                  <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                  <div className="grid grid-cols-2 md:grid-cols-5 gap-4 nations-grid">
                     {nations.map((nation) => (
-                      <div
+                      <a
                         key={nation.name}
-                        className="card-tactical p-4 text-center hover:border-primary/50 transition-colors"
+                        href={guideUrlForNation(nation.name)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flag-card group card-tactical p-4 text-center hover:border-primary/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-md"
                       >
-                        <span className="text-4xl mb-2 block">{nation.flag}</span>
-                        <span className="text-xs uppercase tracking-wider text-foreground">
+                        <span className="text-4xl mb-2 block transition-all duration-300 ease-out">
+                          <FlagEmoji {...nation.flagProps} className="h-10 w-12" />
+                        </span>
+                        <span className="text-xs uppercase tracking-wider text-foreground transition-colors group-hover:text-primary">
                           {nation.name}
                         </span>
-                      </div>
+                      </a>
                     ))}
                   </div>
                 </TabsContent>
@@ -216,35 +224,35 @@ const FlashpointColdWar = () => {
                 <TabsContent value="scenarios" className="space-y-6">
                   <div className="text-center mb-8">
                     <h3 className="font-display text-2xl font-bold uppercase mb-4">
-                      60+ Authentic Scenarios
+                      Read the Field Manuals
                     </h3>
                     <p className="text-muted-foreground max-w-2xl mx-auto">
-                      From small engagements to massive operations, experience the full spectrum of Cold War tactical combat across meticulously researched scenarios.
+                      Over 700 pages of documentation including detailed field manuals covering gameplay mechanics, custom content creation, and tactical doctrines to help you master the battlefield and extend the game.
                     </p>
                   </div>
                   <div className="grid md:grid-cols-3 gap-6">
                     <div className="bg-card border border-border p-6">
                       <h4 className="font-display font-bold uppercase text-primary mb-2">
-                        Fulda Gap
+                        Gameplay Manuals
                       </h4>
                       <p className="text-sm text-muted-foreground">
-                        Defend against the Soviet onslaught through Germany's most critical corridor.
+                        Detailed information on the game's fundamentals, including navigating its interface, and in-depth looks at the systems.
                       </p>
                     </div>
                     <div className="bg-card border border-border p-6">
                       <h4 className="font-display font-bold uppercase text-primary mb-2">
-                        North German Plain
+                        Operational Guides
                       </h4>
                       <p className="text-sm text-muted-foreground">
-                        Armored warfare across open terrain where tanks reign supreme.
+                        Learn more about the chronology of WWIII, view TO&E tables, read the Scenario and Campaign descriptions and study the Maps.
                       </p>
                     </div>
                     <div className="bg-card border border-border p-6">
                       <h4 className="font-display font-bold uppercase text-primary mb-2">
-                        Southern Storm
+                        User Content Guides
                       </h4>
                       <p className="text-sm text-muted-foreground">
-                        New scenarios covering the southern theater of operations.
+                        Learn how to extend the game by creating new Scenarios, constructing Maps, editing Data, every step of the way.
                       </p>
                     </div>
                   </div>
@@ -252,7 +260,7 @@ const FlashpointColdWar = () => {
 
                 <TabsContent value="equipment" className="space-y-6">
                   <p className="text-muted-foreground text-center mb-8">
-                    Command over 500 historically accurate unit types from both NATO and Warsaw Pact arsenals.
+                    Command over 900 historically accurate unit types from both NATO and Warsaw Pact arsenals.
                   </p>
                   <div className="grid md:grid-cols-2 gap-8">
                     <div className="card-tactical p-6">
