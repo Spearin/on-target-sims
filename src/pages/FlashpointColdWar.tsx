@@ -5,49 +5,50 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import VideoEmbed from "@/components/ui/VideoEmbed";
 import ImageGallery from "@/components/ui/ImageGallery";
-import { ExternalLink, Monitor, HardDrive, Cpu, MemoryStick } from "lucide-react";
+import { Computer, ExternalLink, Monitor, HardDrive, Cpu, MemoryStick } from "lucide-react";
+import FlagEmoji from "@/components/FlagEmoji";
 
 const nations = [
-  { name: "United States", flag: "🇺🇸" },
-  { name: "Soviet Union", flag: "🇷🇺" },
-  { name: "United Kingdom", flag: "🇬🇧" },
-  { name: "West Germany", flag: "🇩🇪" },
-  { name: "East Germany", flag: "🇩🇪" },
-  { name: "France", flag: "🇫🇷" },
-  { name: "Canada", flag: "🇨🇦" },
-  { name: "Belgium", flag: "🇧🇪" },
-  { name: "Netherlands", flag: "🇳🇱" },
-  { name: "Czechoslovakia", flag: "🇨🇿" },
+  { name: "United States", flag: <FlagEmoji countryCode="US" title="United States" /> },
+  { name: "United Kingdom", flag: <FlagEmoji countryCode="GB" title="United Kingdom" /> },
+  { name: "West Germany", flag: <FlagEmoji countryCode="DE" title="West Germany" /> },  
+  { name: "Soviet Union", flag: <FlagEmoji name="SU" title="Soviet Union" /> },
+  { name: "East Germany", flag: <FlagEmoji name="DDR" title="East Germany" /> },
+  { name: "France", flag: <FlagEmoji countryCode="FR" title="France" /> },
+  { name: "Canada", flag: <FlagEmoji countryCode="CA" title="Canada" /> },
+  { name: "Belgium", flag: <FlagEmoji countryCode="BE" title="Belgium" /> },
+  { name: "Poland", flag: <FlagEmoji countryCode="PL" title="Poland" /> },
+  { name: "Czechoslovakia", flag: <FlagEmoji countryCode="CZ" title="Czechoslovakia" /> },
 ];
 
 const screenshots = [
   {
-    src: "https://cdn.akamai.steamstatic.com/steam/apps/1314410/ss_1a3c6f0c8e5b4d2f9e8b7a6c5d4e3f2a1b0c9d8e.jpg?t=1699000000",
-    alt: "Flashpoint Campaigns tactical map view",
-    caption: "Detailed tactical map with unit positions",
+    src: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3170350/9b184cfb3ea2ad751b3969aa5ff933885ee2c59b/ss_9b184cfb3ea2ad751b3969aa5ff933885ee2c59b.1920x1080.jpg?t=1763650804",
+    alt: "Multinational Forces",
+    caption: "Authentic force structures",
   },
   {
-    src: "https://cdn.akamai.steamstatic.com/steam/apps/1314410/ss_2b4d6f8e0a2c4e6f8a0b2c4d6e8f0a2b4c6d8e0f.jpg?t=1699000000",
+    src: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3170350/fd566ce5880339c274537ea0b1e8d938a3066806/ss_fd566ce5880339c274537ea0b1e8d938a3066806.1920x1080.jpg?t=1763650804",
     alt: "Tank combat in Flashpoint Campaigns",
     caption: "Armored warfare across European terrain",
   },
   {
-    src: "https://cdn.akamai.steamstatic.com/steam/apps/1314410/ss_3c5e7f9a1b3d5f7a9b1c3d5e7f9a1b3c5d7e9f1a.jpg?t=1699000000",
+    src: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3170350/f87536ed4e717e9ab93b985f5492ddef01541266/ss_f87536ed4e717e9ab93b985f5492ddef01541266.1920x1080.jpg?t=1763650804",
     alt: "Artillery support operations",
-    caption: "Coordinate devastating artillery strikes",
+    caption: "Coordinate tactical transport, including air assault",
   },
   {
-    src: "https://cdn.akamai.steamstatic.com/steam/apps/1314410/ss_4d6f8a0c2e4f6a8c0d2e4f6a8c0d2e4f6a8c0d2e.jpg?t=1699000000",
+    src: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3170350/8c8f859bd083d47296f5949f7ab3e429cf4db2c7/ss_8c8f859bd083d47296f5949f7ab3e429cf4db2c7.1920x1080.jpg?t=1763650804",
     alt: "Air support mission",
     caption: "Call in close air support",
   },
   {
-    src: "https://cdn.akamai.steamstatic.com/steam/apps/1314410/ss_5e7f9b1d3f5a7b9d1e3f5a7b9d1e3f5a7b9d1e3f.jpg?t=1699000000",
-    alt: "Infantry operations",
-    caption: "Mechanized infantry in action",
+    src: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3170350/2df1adb7f7aee944586258486b5e91ce54ba8d72/ss_2df1adb7f7aee944586258486b5e91ce54ba8d72.1920x1080.jpg?t=1763650804",
+    alt: "SOPs",
+    caption: "Set Standard Operating Procedures for your units",
   },
   {
-    src: "https://cdn.akamai.steamstatic.com/steam/apps/1314410/ss_6f8a0c2e4g6b8c0e2f4g6b8c0e2f4g6b8c0e2f4g.jpg?t=1699000000",
+    src: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3170350/0923bdbc31781e17c2a15798ec357c289818587b/ss_0923bdbc31781e17c2a15798ec357c289818587b.1920x1080.jpg?t=1763650804",
     alt: "Night operations",
     caption: "Night combat operations",
   },
@@ -70,8 +71,8 @@ const FlashpointColdWar = () => {
         <main className="pt-20">
           {/* Hero */}
           <section className="relative py-20 md:py-32 overflow-hidden">
-            <div className="absolute inset-0 tactical-grid" />
-            <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-background to-background" />
+            <div className="absolute inset-0 tactical-grid bg-[url('images/time-to-dance.png')] bg-center bg-cover bg-no-repeat" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/70 to-background " />
             
             <div className="container mx-auto px-4 relative z-10">
               <div className="max-w-4xl mx-auto text-center">
@@ -83,7 +84,7 @@ const FlashpointColdWar = () => {
                   <span className="text-gradient-olive">Cold War</span>
                 </h1>
                 <p className="text-lg text-muted-foreground mb-8">
-                  Experience the most authentic Cold War tactical wargame ever created. Command forces from 10 nations across 60+ scenarios using our revolutionary simultaneous execution (WEGO) system.
+                  Experience the most authentic Cold War tactical wargame ever created. Command forces from 10 nations across 100+ scenarios using our revolutionary simultaneous execution (WEGO) system.
                 </p>
                 
                 <div className="flex flex-wrap gap-4 justify-center">
@@ -103,9 +104,9 @@ const FlashpointColdWar = () => {
                   >
                     <Button
                       variant="outline"
-                      className="border-primary/50 hover:bg-primary/10 uppercase tracking-wider inline-flex items-center gap-2"
+                      className="border-primary/50 hover:bg-primary/10 tracking-wider inline-flex items-center gap-2"
                     >
-                      Matrix Games <ExternalLink className="w-4 h-4" />
+                      Buy on Matrix Games <ExternalLink className="w-4 h-4" />
                     </Button>
                   </a>
                 </div>
@@ -318,7 +319,7 @@ const FlashpointColdWar = () => {
                   </h3>
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
-                      <Monitor className="w-5 h-5 text-muted-foreground mt-0.5" />
+                      <Computer className="w-5 h-5 text-muted-foreground mt-0.5" />
                       <div>
                         <span className="text-xs uppercase tracking-wider text-muted-foreground">OS</span>
                         <p className="text-sm text-foreground">Windows 10</p>
@@ -328,7 +329,7 @@ const FlashpointColdWar = () => {
                       <Cpu className="w-5 h-5 text-muted-foreground mt-0.5" />
                       <div>
                         <span className="text-xs uppercase tracking-wider text-muted-foreground">Processor</span>
-                        <p className="text-sm text-foreground">Intel Core i5 or equivalent</p>
+                        <p className="text-sm text-foreground">3 GHz or faster</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
@@ -339,10 +340,17 @@ const FlashpointColdWar = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
+                      <Monitor className="w-5 h-5 text-muted-foreground mt-0.5" />
+                      <div>
+                        <span className="text-xs uppercase tracking-wider text-muted-foreground">Resolution</span>
+                        <p className="text-sm text-foreground">1920x1080</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
                       <HardDrive className="w-5 h-5 text-muted-foreground mt-0.5" />
                       <div>
                         <span className="text-xs uppercase tracking-wider text-muted-foreground">Storage</span>
-                        <p className="text-sm text-foreground">10 GB available space</p>
+                        <p className="text-sm text-foreground">2 GB available space</p>
                       </div>
                     </li>
                   </ul>
@@ -354,17 +362,17 @@ const FlashpointColdWar = () => {
                   </h3>
                   <ul className="space-y-4">
                     <li className="flex items-start gap-3">
-                      <Monitor className="w-5 h-5 text-muted-foreground mt-0.5" />
+                      <Computer className="w-5 h-5 text-muted-foreground mt-0.5" />
                       <div>
                         <span className="text-xs uppercase tracking-wider text-muted-foreground">OS</span>
-                        <p className="text-sm text-foreground">Windows 10/11</p>
+                        <p className="text-sm text-foreground">Windows 11 64-bit</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
                       <Cpu className="w-5 h-5 text-muted-foreground mt-0.5" />
                       <div>
                         <span className="text-xs uppercase tracking-wider text-muted-foreground">Processor</span>
-                        <p className="text-sm text-foreground">Intel Core i7 or equivalent</p>
+                        <p className="text-sm text-foreground">3 GHz or faster</p>
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
@@ -375,10 +383,17 @@ const FlashpointColdWar = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
+                      <Monitor className="w-5 h-5 text-muted-foreground mt-0.5" />
+                      <div>
+                        <span className="text-xs uppercase tracking-wider text-muted-foreground">Resolution</span>
+                        <p className="text-sm text-foreground">2560x1440</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
                       <HardDrive className="w-5 h-5 text-muted-foreground mt-0.5" />
                       <div>
                         <span className="text-xs uppercase tracking-wider text-muted-foreground">Storage</span>
-                        <p className="text-sm text-foreground">20 GB SSD</p>
+                        <p className="text-sm text-foreground">2 GB SSD</p>
                       </div>
                     </li>
                   </ul>
@@ -395,7 +410,7 @@ const FlashpointColdWar = () => {
               </h2>
               <div className="flex flex-wrap gap-4 justify-center">
                 <a
-                  href="https://store.steampowered.com/app/1314410/Flashpoint_Campaigns_Southern_Storm/"
+                  href="https://store.steampowered.com/app/3170350/Flashpoint_Campaigns_Cold_War/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -404,15 +419,15 @@ const FlashpointColdWar = () => {
                   </Button>
                 </a>
                 <a
-                  href="https://www.matrixgames.com/game/flashpoint-campaigns-southern-storm"
+                  href="https://www.matrixgames.com/game/flashpoint-campaigns-cold-war"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Button
                     variant="outline"
-                    className="border-primary/50 hover:bg-primary/10 uppercase tracking-wider inline-flex items-center gap-2"
+                    className="border-primary/50 hover:bg-primary/10 tracking-wider inline-flex items-center gap-2"
                   >
-                    Matrix Games <ExternalLink className="w-4 h-4" />
+                    Buy on Matrix Games <ExternalLink className="w-4 h-4" />
                   </Button>
                 </a>
               </div>

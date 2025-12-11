@@ -61,14 +61,12 @@ const AboutUs = () => {
 
             <div className="container mx-auto px-4 relative z-10">
               <div className="max-w-3xl mx-auto text-center">
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mb-6">
-                  <Target className="w-10 h-10 text-primary" />
-                </div>
+                
                 <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold uppercase mb-6">
-                  About <span className="text-gradient-olive">On Target</span>
+                  About <span className="text-gradient-olive">OTS</span>
                 </h1>
                 <p className="text-lg text-muted-foreground">
-                  Crafting authentic military simulations with passion and precision since 2013.
+                  Crafting authentic military simulations with passion and precision for over two decades.
                 </p>
               </div>
             </div>
@@ -88,7 +86,7 @@ const AboutUs = () => {
                     </h2>
                     <div className="space-y-4 text-muted-foreground">
                       <p>
-                        On Target Simulations was founded by a group of dedicated wargamers and simulation professionals who shared a common vision: to create the most authentic and engaging Cold War tactical experience possible.
+                        On Target Simulations was founded by a group of dedicated wargamers and simulation professionals who shared a common vision: to create the most authentic and engaging Cold War tactical wargaming experience possible.
                       </p>
                       <p>
                         What started as a passion project has evolved into a studio known for pushing the boundaries of what wargaming can achieve. Our revolutionary WEGO turn system, pioneered in Flashpoint Germany, has become the gold standard for turn-based tactical combat.

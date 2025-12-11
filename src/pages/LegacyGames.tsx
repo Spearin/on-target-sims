@@ -6,16 +6,30 @@ import { ExternalLink, Calendar } from "lucide-react";
 
 const legacyGames = [
   {
-    year: "2015",
-    title: "Germany Reforged",
+    year: "2022",
+    title: "Flashpoint Campaigns: Southern Storm",
     description:
-      "A major expansion that adds new nations, scenarios, and equipment to the Flashpoint Campaigns universe. Experience the Cold War conflict from new perspectives with expanded German forces and additional NATO allies.",
+      "A significant upgrade to the Flashpoint Campaigns game engine, featuring scenarios set in the southern areas of Germany.",
     features: [
-      "New playable nations",
-      "Additional scenarios",
-      "Expanded equipment database",
-      "New maps and terrain",
+      "New playable nations: Canada, France, Czechoslovakia",
+      "50+ scenarios",
+      "Expanded equipment database from the 1980s",
+      "40+ maps",
     ],
+    image: "images/legacy/southern-storm.jpg",
+    storeLink: "https://www.matrixgames.com/game/flashpoint-campaigns-southern-storm",
+  },
+  {
+    year: "2015",
+    title: "Germany Reforged (DLC)",
+    description:
+      "A major expansion to Red Storm that takes the classic scenarios from Flashpoint Germany and brings them up to the new engine.",
+    features: [
+      "18 scenarios with 43 variations",
+      "Original maps updated to new engine",
+      "New Eiterberg map 40 x 30 km",
+    ],
+    image: "images/legacy/germany-reforged.png",
     storeLink: "https://www.matrixgames.com/game/flashpoint-campaigns-germany-reforged",
   },
   {
@@ -29,6 +43,7 @@ const legacyGames = [
       "Improved AI behavior",
       "PBEM multiplayer support",
     ],
+    image: "images/legacy/red-storm.png",
     storeLink: "https://www.matrixgames.com/game/flashpoint-campaigns-red-storm-players-edition",
   },  
   {
@@ -42,8 +57,9 @@ const legacyGames = [
       "Authentic scenarios",
       "Historical accuracy",
     ],
+    image: "images/legacy/flashpoint-germany.png",
     storeLink: "https://www.matrixgames.com/game/flashpoint-germany",
-  },
+  }
 ];
 
 const LegacyGames = () => {
@@ -108,6 +124,14 @@ const LegacyGames = () => {
                         }`}
                       >
                         <div className="card-tactical p-6 md:p-8">
+                          {game.image && (
+                            <img
+                              src={game.image}
+                              alt={`${game.title} cover`}
+                              className="w-40 h-40 object-contain rounded-md mb-4 md:mb-0 flex-shrink-0 md:float-right md:ml-6"
+                            />
+                          )}
+
                           <div className="flex items-center gap-4 mb-4">
                             <span className="text-3xl font-display font-bold text-primary">
                               {game.year}
@@ -173,7 +197,7 @@ const LegacyGames = () => {
                   Two Decades of Excellence
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                  From our humble beginnings with Flashpoint Germany in 2013 to the comprehensive Flashpoint Campaigns: Cold War today, we've remained committed to one goal: creating the most authentic and engaging Cold War tactical simulations possible.
+                  From our humble beginnings with Flashpoint Germany in 2005 to the comprehensive Flashpoint Campaigns: Cold War today, we've remained committed to one goal: creating the most authentic and engaging Cold War tactical simulations possible.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   Each game in our catalog represents lessons learned and innovations made. Our legacy titles remain playable and supported, ensuring that fans of traditional wargaming can continue to enjoy these classics while also experiencing our latest innovations.
@@ -192,7 +216,7 @@ const LegacyGames = () => {
                 Ready to command the battlefield with our most advanced simulation yet?
               </p>
               <a
-                href="https://store.steampowered.com/app/1314410/Flashpoint_Campaigns_Southern_Storm/"
+                href="https://store.steampowered.com/app/3170350/Flashpoint_Campaigns_Cold_War/"
                 target="_blank"
                 rel="noopener noreferrer"
               >

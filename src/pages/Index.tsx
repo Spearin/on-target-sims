@@ -4,7 +4,6 @@ import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/home/HeroSection";
 import FeaturesSection from "@/components/home/FeaturesSection";
 import StatsSection from "@/components/home/StatsSection";
-import NewsSection from "@/components/home/NewsSection";
 import CTASection from "@/components/home/CTASection";
 
 const Index = () => {
@@ -26,9 +25,8 @@ const Index = () => {
         <Header />
         <main>
           <HeroSection />
-          <FeaturesSection />
           <StatsSection />
-          <NewsSection />
+          <FeaturesSection />
           <CTASection />
         </main>
         <Footer />

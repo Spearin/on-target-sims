@@ -34,9 +34,9 @@ const CTASection = () => {
             >
               <Button
                 variant="outline"
-                className="border-primary/50 hover:bg-primary/10 w-full sm:w-auto uppercase tracking-wider inline-flex items-center gap-2"
+                className="border-primary/50 hover:bg-primary/10 w-full sm:w-auto tracking-wider inline-flex items-center gap-2"
               >
-                Matrix Games <ExternalLink className="w-4 h-4" />
+                Buy on Matrix Games <ExternalLink className="w-4 h-4" />
               </Button>
             </a>
           </div>

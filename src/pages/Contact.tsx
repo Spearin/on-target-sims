@@ -176,36 +176,7 @@ const Contact = () => {
 
                 {/* Info Cards */}
                 <div className="space-y-6">
-                  {/* Newsletter */}
-                  <div className="card-tactical p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded bg-primary/10 flex items-center justify-center shrink-0">
-                        <Mail className="w-6 h-6 text-primary" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="font-display text-lg font-bold uppercase mb-2 text-foreground">
-                          Newsletter
-                        </h3>
-                        <p className="text-sm text-muted-foreground mb-4">
-                          Subscribe for game updates, patch notes, and exclusive content.
-                        </p>
-                        <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
-                          <Input
-                            type="email"
-                            value={newsletterEmail}
-                            onChange={(e) => setNewsletterEmail(e.target.value)}
-                            required
-                            placeholder="your@email.com"
-                            className="bg-background border-border focus:border-primary flex-1"
-                          />
-                          <Button type="submit" size="sm" className="bg-primary hover:bg-primary/90">
-                            Subscribe
-                          </Button>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-
+                  
                   {/* Community */}
                   <div className="card-tactical p-6">
                     <div className="flex items-start gap-4">

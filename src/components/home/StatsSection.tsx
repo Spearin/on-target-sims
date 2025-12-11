@@ -9,7 +9,7 @@ const stats = [
 
 const StatsSection = () => {
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section id="stats"className="py-20 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5" />
       <div className="absolute inset-0 topo-overlay opacity-20" />

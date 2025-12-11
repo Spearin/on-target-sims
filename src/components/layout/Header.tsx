@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Target } from "lucide-react";
+import { Menu, X, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navItems = [
@@ -16,23 +16,16 @@ const Header = () => {
   const location = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm border-b border-border bg-[url('/images/title-bg.png')] bg-cover bg-center bg-no-repeat bg-blend-plus-multiply">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="relative">
-              <Target className="w-8 h-8 text-primary transition-transform duration-300 group-hover:rotate-45" />
-              <div className="absolute inset-0 bg-primary/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-display text-lg md:text-xl font-bold uppercase tracking-wider text-foreground">
-                On Target
-              </span>
-              <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-muted-foreground -mt-1">
-                Simulations
-              </span>
-            </div>
+            <img
+              src="images/OTS.png"
+              alt="On Target Simulations"
+              className="w-30 h-14 md:w-30 md:h-10 object-contain transition-transform duration-300 group-hover:scale-105 flex-none"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -41,9 +34,9 @@ const Header = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`nav-link text-sm uppercase tracking-wider font-medium ${
-                  location.pathname === item.path ? "text-primary" : ""
-                }`}
+                className={`text-sm uppercase tracking-wider font-medium relative inline-block transition-colors duration-300 ${
+                  location.pathname === item.path ? "text-primary" : "text-foreground"
+                } after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-full after:bg-primary after:origin-left after:scale-x-0 after:transition-transform after:duration-300 hover:text-primary hover:after:scale-x-100`}
               >
                 {item.name}
               </Link>
@@ -57,7 +50,9 @@ const Header = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button className="btn-tactical text-xs">Buy Now</Button>
+              <Button className="btn-tactical w-full text-xs">
+                Buy Now <ExternalLink className="w-4 h-4" />
+            </Button>
             </a>
           </div>
 
@@ -99,7 +94,9 @@ const Header = () => {
             rel="noopener noreferrer"
             className="mt-2"
           >
-            <Button className="btn-tactical w-full text-xs">Buy Now</Button>
+            <Button className="btn-tactical w-full text-xs">
+              Buy Now <ExternalLink className="w-4 h-4" />
+            </Button>
           </a>
         </nav>
       </div>

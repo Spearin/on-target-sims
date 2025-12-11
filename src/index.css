@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://db.onlinewebfonts.com/c/f631caaffee0daf4ef9c73057b1dba5f?family=PF+Mellon+Medium");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,6 +10,16 @@
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
+
+@font-face {
+    font-family: "PF Mellon Medium";
+    src: url("https://db.onlinewebfonts.com/t/f631caaffee0daf4ef9c73057b1dba5f.eot");
+    src: url("https://db.onlinewebfonts.com/t/f631caaffee0daf4ef9c73057b1dba5f.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/f631caaffee0daf4ef9c73057b1dba5f.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/f631caaffee0daf4ef9c73057b1dba5f.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/f631caaffee0daf4ef9c73057b1dba5f.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/f631caaffee0daf4ef9c73057b1dba5f.svg#PF Mellon Medium")format("svg");
+}
 
 @layer base {
   :root {
@@ -58,7 +69,7 @@ All colors MUST be HSL.
 
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    --font-sans: "PF Mellon Medium", "Open Sans", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 
     --font-serif: "Crimson Text", ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
 
@@ -101,7 +112,7 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
-    --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    --font-sans: "PF Mellon Medium", "Open Sans", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
     --font-serif: "Crimson Text", ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
     --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   }

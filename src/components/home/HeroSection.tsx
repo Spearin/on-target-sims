@@ -1,10 +1,10 @@
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import VideoEmbed from "@/components/ui/VideoEmbed";
 
 const HeroSection = () => {
   const scrollToContent = () => {
-    const element = document.getElementById("features");
+    const element = document.getElementById("stats");
     element?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -13,7 +13,7 @@ const HeroSection = () => {
       {/* Background Effects */}
       <div className="absolute inset-0 tactical-grid" />
       <div className="absolute inset-0 topo-overlay opacity-30" />
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background bg-[url('images/bg-cw.png')] bg-center bg-cover bg-no-repeat" />
       
       {/* Animated scan line */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -26,7 +26,7 @@ const HeroSection = () => {
           <div className="text-center lg:text-left space-y-6">
             <div className="inline-block animate-fade-up">
               <span className="text-xs uppercase tracking-[0.3em] text-primary border border-primary/30 px-4 py-2">
-                Flashpoint Campaigns
+                Available Now
               </span>
             </div>
             
@@ -46,9 +46,9 @@ const HeroSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button className="btn-tactical w-full sm:w-auto">
-                  Buy on Steam
-                </Button>
+                <Button className="btn-tactical w-full sm:w-auto inline-flex items-center gap-2">
+                Buy on Steam <ExternalLink className="w-4 h-4" />
+              </Button>
               </a>
               <a
                 href="https://www.matrixgames.com/game/flashpoint-campaigns-cold-war"
@@ -56,28 +56,12 @@ const HeroSection = () => {
                 rel="noopener noreferrer"
               >
                 <Button
-                  variant="outline"
-                  className="border-primary/50 hover:bg-primary/10 w-full sm:w-auto uppercase tracking-wider"
+                variant="outline"
+                className="border-primary/50 hover:bg-primary/10 w-full sm:w-auto tracking-wider inline-flex items-center gap-2"
                 >
-                  Matrix Games
+                  Buy on Matrix Games <ExternalLink className="w-4 h-4" />
                 </Button>
               </a>
-            </div>
-
-            {/* Quick Stats */}
-            <div className="flex flex-wrap gap-8 justify-center lg:justify-start pt-4 animate-fade-up animation-delay-400">
-              <div className="text-center">
-                <div className="font-display text-2xl font-bold text-primary">10</div>
-                <div className="text-xs uppercase tracking-wider text-muted-foreground">Nations</div>
-              </div>
-              <div className="text-center">
-                <div className="font-display text-2xl font-bold text-primary">110+</div>
-                <div className="text-xs uppercase tracking-wider text-muted-foreground">Scenarios</div>
-              </div>
-              <div className="text-center">
-                <div className="font-display text-2xl font-bold text-primary">80+</div>
-                <div className="text-xs uppercase tracking-wider text-muted-foreground">Maps</div>
-              </div>
             </div>
           </div>
 

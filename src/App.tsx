@@ -10,8 +10,10 @@ import LegacyGames from "./pages/LegacyGames";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
+const routerBase = import.meta.env.VITE_ROUTER_BASENAME || "/new";
 
 const App = () => (
   <HelmetProvider>
@@ -19,7 +21,8 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename="/on-target-sims">
+        <BrowserRouter basename={routerBase}>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/flashpoint-cold-war" element={<FlashpointColdWar />} />

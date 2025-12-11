@@ -10,16 +10,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <Link to="/" className="flex items-center gap-2">
-              <Target className="w-8 h-8 text-primary" />
-              <div className="flex flex-col">
-                <span className="font-display text-lg font-bold uppercase tracking-wider">
-                  On Target
-                </span>
-                <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground -mt-1">
-                  Simulations
-                </span>
-              </div>
+            <Link to="/" className="flex items-center gap-2 group">
+              <img
+                src="images/OTS.png"
+                alt="On Target Simulations"
+                className="w-30 h-14 object-contain filter grayscale transition duration-300 group-hover:grayscale-0"
+              />
             </Link>
             <p className="text-sm text-muted-foreground">
               Crafting authentic military simulations with decades of combined expertise in wargame design.
